@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,7 +9,12 @@ public class Main {
         System.out.print("Сумма в юанях: ");
         int yuan = input.nextInt();
         String ending = gen_end(yuan);
-        System.out.println("Сумма в рублях: " + RUBLES_PER_YUAN * yuan + " (сумма в " + yuan + " " + ending + ")");
+        System.out.println("Сумма в рублях: " + RUBLES_PER_YUAN * yuan + " (" + yuan + " " + ending + ")");
+
+        Random rand = new Random();
+        for (int i = 1; i < 100; i += rand.nextInt(10) + 1) {
+            System.out.println("Сумма в рублях: " + RUBLES_PER_YUAN * i + " (" + i + " " + gen_end(i) + ")");
+        }
     }
 
     private static String gen_end(int yuan) {

@@ -7,6 +7,7 @@ public class Main {
         System.out.println(car_two);
         System.out.println(car_three);
         car_two.set_color("yellow");
+
         int current_year = 2024;
         System.out.println(car_one.get_diff_year(current_year));
     }
